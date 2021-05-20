@@ -32,7 +32,8 @@
     "@wdio/local-runner": "^7.6.0",
     "@wdio/spec-reporter": "^7.6.0",
     "chromedriver": "^90.0.0",
-    "wdio-chromedriver-service": "^7.0.0"
+    "wdio-chromedriver-service": "^7.0.0",
+    "wdio-docker-service": "^3.1.2"
   },
   "dependencies": {
     "prettier": "^2.3.0"
