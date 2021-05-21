@@ -16,7 +16,7 @@ class HomePage extends Page {
             await (await this.cookie_accept_button).waitForExist(this.waitObj)
             await (await this.cookie_accept_button).click()
         } catch (error) {
-            console.log('----Looks like cookies popup not present, we can continue')
+            console.log('----Looks like cookies popup not present, we can continue' + error)
         }
 
         await (await this.westwingnow_logo).waitForExist(this.waitObj)
@@ -25,7 +25,7 @@ class HomePage extends Page {
     }
 
     async searchProduct (productName) {
-        await (await this.product_search_input).waitForExist(this.waitObj)
+        await (await this.product_search_input).waitForClickable(this.waitObj)
         await this.enterText(this.product_search_input, productName)
         await (await this.firstSuggestion_link).waitForExist(this.waitObj)
         await (await this.firstSuggestion_link).click()
